@@ -1,0 +1,66 @@
+<style>
+    body{
+    counter-reset: section;
+    }
+
+    h3.I {
+    counter-reset: subsection;
+    }
+    p.II {
+    margin-left: 10px;
+    }
+    p.II {
+    counter-reset: subsection2;
+    }
+    p.III {
+    margin-left: 25px;
+    }
+    p.III {
+    counter-reset: subsection3;
+    }
+    p.IV {
+    margin-left: 40px;
+    }
+    p.IV {
+    counter-reset: subsection4;
+    }
+    p.V {
+    margin-left: 55px;
+    }
+
+    h3.I::before {
+    counter-increment: section;
+    content: counter(section) ". ";
+    }
+
+    p.II::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+
+    }
+    p.III::before {
+    counter-increment: subsection2;
+    content: counter(section) "." counter(subsection) "." counter(subsection2) " ";
+
+    }
+    p.IV::before {
+    counter-increment: subsection3;
+    content: counter(section) "." counter(subsection) "." counter(subsection2) "." counter(subsection3) " ";
+
+    }
+    p.V::before {
+    counter-increment: subsection4;
+    content: counter(section) "." counter(subsection) "." counter(subsection2) "." counter(subsection3) "." counter(subsection4) " ";
+    }
+    </style>
+    <html>
+    <body>
+    <h3 class="I">
+      Header
+    </h3>
+    <p class="II">second level</p>
+    <p class="III">third level</p>
+    <p class="IV">fourth level</p>
+
+    </body>
+    </html>
